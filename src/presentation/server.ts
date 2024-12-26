@@ -5,11 +5,13 @@ import { LogRepositoryImpl } from "../infrastructure/repositories/log.repository
 import { FileSystemDatasource } from "../infrastructure/datasources/file-system.datasource";
 import { envs } from "../config/plugins/envs.plugin";
 import { EmailService } from "./email/email.service";
+import { SendEmailLogs } from "../domain/use-cases/email/send-logs";
 
 const fileSystemLogRepository = new LogRepositoryImpl(
     new FileSystemDatasource()
 );
 
+const emailService = new EmailService();
 
 
 
@@ -17,20 +19,14 @@ export class Server {
     
     public static start() { // Estatico para usarse sin instanciar la clase
 
-        // Mandar email
-
-        // const emailService = new EmailService();
-        // emailService.sendEmail({
-        //     to: 'bicovez45@gmail.com',
-        //     subject: 'Logs de sistema',
-        //     htmlBody: `
-        //     <h3>Logs de sistema - NOC</h3>
-        //     <p> Lorem lslasloasdjas askdnasiodasdn jjewjiadsojiadsioadsioad jaidasjoid   </p>
-        //     <p>Ver logs adjuntos</p>
-        //     `
-        // });
+        // emailService.sendEmailWithFileSystemLogs('bicovez45@gmail.com');
         
-        
+        // new SendEmailLogs(
+        //     emailService,
+        //     fileSystemLogRepository
+        // ).execute(
+        //     'bicovez45@gmail.com',
+        // );
         // CronService.createJob(
         //     '*/5 * * * * *',
         //     () => {
