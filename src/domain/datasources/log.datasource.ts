@@ -8,5 +8,3 @@ export abstract class LogDatasource {
 }
 
 
-
-

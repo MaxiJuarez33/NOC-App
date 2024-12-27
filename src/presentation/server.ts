@@ -19,6 +19,8 @@ export class Server {
     
     public static start() { // Estatico para usarse sin instanciar la clase
 
+        console.log('Server started...');
+                
         // emailService.sendEmailWithFileSystemLogs('bicovez45@gmail.com');
         
         // new SendEmailLogs(
