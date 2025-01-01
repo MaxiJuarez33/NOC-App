@@ -13,3 +13,8 @@ MAILER_SECRET_KEY =
 
 PROD = false
 ```
+
+# To run dev
+
+1. Use `npm i` to rebuild node modules
+2.

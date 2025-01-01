@@ -16,8 +16,6 @@ interface Attachement {
     path: string;
 }
 
-// TODO: Attachement
-
 export class EmailService {
     
     private transporter = nodemailer.createTransport({
