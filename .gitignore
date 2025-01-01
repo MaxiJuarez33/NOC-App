@@ -2,8 +2,8 @@ node_modules/
 dist/
 logs/
 mongo/
-!data/mongo/
-!data/postgres/
+!src/data/mongo/
+!src/data/postgres/
 mongo-test/
 postgres/
 postgres-test/
