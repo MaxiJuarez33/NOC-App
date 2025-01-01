@@ -7,12 +7,11 @@ import { Server } from "./presentation/server";
     main();
 })();
 
-
 async function main() {
-    await MongoDatabase.connect({
-        mongoURL: envs.MONGO_URL,
-        dbName: envs.MONGO_DB_NAME,
-    });
+    // await MongoDatabase.connect({
+    //     mongoURL: envs.MONGO_URL,
+    //     dbName: envs.MONGO_DB_NAME,
+    // });
 
     const prisma = new PrismaClient();
     // const newLog = await prisma.logModel.create({

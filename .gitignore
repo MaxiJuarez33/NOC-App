@@ -7,5 +7,7 @@ mongo/
 mongo-test/
 postgres/
 postgres-test/
+coverage/
 .vscode
 .env
+.env.test

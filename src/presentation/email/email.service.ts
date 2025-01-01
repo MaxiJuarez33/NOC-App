@@ -4,14 +4,14 @@ import { Attachment } from 'nodemailer/lib/mailer';
 import { LogEntity, LogSeverityLevel } from '../../domain/entities/log.entity';
 
 
-interface SendEmailOptions {
+export interface SendEmailOptions {
     to: string | string[];
     subject: string;
     htmlBody: string;
     attachments?: Attachment[];
 }
 
-interface Attachement {
+export interface Attachement {
     filename: string;
     path: string;
 }
